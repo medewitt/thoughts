@@ -12,3 +12,7 @@ jobs:
         php-version: '7.4'
     - run: php ./portable.php > index.html
     - run: php ./portable-feed.php > feed.xml
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Build website (automatic)
