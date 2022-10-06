@@ -1,3 +1,1 @@
-# hello
-
-About things here
+About things here.
