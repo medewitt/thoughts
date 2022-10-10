@@ -35,7 +35,7 @@ $posts = '';
 foreach ($files as $file) {
 
   $filename_no_ext = substr($file, 0, strrpos($file, '.'));    
-  $filename_no_ext = preg_replace("/[A-z]/", "", $filename_no_ext );
+  $filename_no_ext = substr($filename_no_ext, 0, 10); // YYYY-MM-DD
   $file_path = __DIR__.'/content/'.$file;
   $file = fopen($file_path, 'r');
   $post_date = date('M j Y', strtotime($filename_no_ext));
