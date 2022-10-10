@@ -4,9 +4,9 @@
 - Add <link rel="alternate" type="application/rss+xml" href="feed.xml"> to the <head> of portable.php
 - `bash portable.sh` to generate both index.html and feed.xml */
 
-$site_title = 'This is the website title';
-$site_desc = 'This is the website description';
-$site_url = 'http://example.com';
+$site_title =  'Random thoughts that are not full blog posts';
+$site_desc = 'Various thoughts on statistics, programming, epidemiology';
+$site_url = 'https://michaeldewittjr.com/thoughts';
 
 function create_slug($string){
   $string = strtolower($string);
@@ -28,7 +28,8 @@ rsort($files);
 
 foreach ($files as $file) {
 
-  $filename_no_ext = substr($file, 0, strrpos($file, "."));    
+  $filename_no_ext = substr($file, 0, strrpos($file, "."));   
+  $filename_no_ext = substr($filename_no_ext, 0, 10);   
   $date = date("r", strtotime($filename_no_ext));
   $file_path = __DIR__.'/content/'.$file;
   $file = fopen($file_path, 'r');
