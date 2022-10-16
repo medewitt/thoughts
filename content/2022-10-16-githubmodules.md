@@ -1,6 +1,6 @@
 # GitHub Submodules
 
-Not too much to say on this topic other than I think that is is my new favorite tool
+Not too much to say on this topic other than I think that is is my new favorite tool.
 
 Modules allow you to better encapsulate code by placing subdirectories in their own repository.
 These can then be added using the :
